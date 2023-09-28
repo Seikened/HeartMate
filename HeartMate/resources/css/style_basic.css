@@ -1,0 +1,140 @@
+/* Normalizar el diseño*/
+/* Star of css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of css reset*/
+/* Caracteritícas del diseño
+Azul Médico: Representa confianza y profesionalidad.
+#007BFF: Para botones, títulos y elementos destacados.
+Blanco: Transmite limpieza y claridad.
+#FFFFFF: Principalmente para fondos y espacios en blanco.
+Gris Claro: Neutral para elementos secundarios.
+#F5F5F5: Fondo de secciones o cartas.
+Gris Oscuro: Para textos y descripciones.
+#333333: Textos principales y encabezados.
+#7D7D7D: Textos secundarios o menos importantes.
+Principal (Para títulos y encabezados): Roboto Bold. Es moderna y legible.
+Link para descargar Roboto
+Secundaria (Para textos y descripciones): Roboto Regular o Roboto Light. Mantiene la coherencia con la fuente principal y es adecuada para la lectura.
+Link para descargar Roboto
+Creemos variables*/
+
+:root{
+    --azul-medico: #007BFF;
+    --blanco: #FFFFFF;
+    --gris-claro: #F5F5F5;
+    --gris-oscuro: #333333;
+    --gris-oscuro-claro: #7D7D7D;
+    --fuente-principal: 'Roboto', sans-serif;
+    --fuente-secundaria: 'Roboto', sans-serif;
+}
+/* Estilos generales*/
+body{
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--gris-oscuro);
+    background-color: var(--gris-claro);
+}
+
+/*Normalizar el diseño los input*/
+#input-box{
+    max-width: 26%;
+    margin: 0 auto;
+    height: auto;
+    background: var(--blanco);
+    border-radius: 40px;
+    padding: 5px;
+    border: 2px solid var(--gris-oscuro);
+    font-size: 16px;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input-box form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    padding: 5px;
+    align-items: justify;
+}
+
+#input-box input[type="text"],
+#input-box input[type="password"]{
+    max-width: 60%;
+    padding: 10px;
+    border: 2px solid var(--azul-medico);
+    border-radius: 5px;
+    text-align: center;
+    align-self: center;
+}
+
+#input-box input[type="text"]:focus,
+#input-box input[type="password"]:focus {
+    border-color: var(--gris-oscuro);
+}
+
+/* Estilo para el botón de enviar */
+#input-box input[type="submit"] {
+    max-width: 70%;
+    background-color: var(--azul-medico);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s;
+    align-self: center;
+}
+
+#input-box input[type="submit"]:hover {
+    background-color: var(--gris-oscuro);
+}
+
+
+
