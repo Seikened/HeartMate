@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@syncfusion/ej2-image-editor": "^23.1.39"
+  }
+}
